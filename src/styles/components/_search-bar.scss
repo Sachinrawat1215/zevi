@@ -1,0 +1,49 @@
+.search-bar {
+  padding: 10px;
+  width: 840px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  padding: 21px 42px 20px 40px;
+
+  input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 32px;
+    font-family: $inter;
+    color: linear-gradient(
+      to bottom,
+      rgba(215, 224, 255, 0.26),
+      rgba(215, 224, 255, 0.26)
+    );
+
+    &::placeholder {
+      font-weight: 300;
+    }
+  }
+
+  svg {
+    width: 42px;
+    height: 42px;
+  }
+
+  &.small {
+    border-radius: 13.735px;
+    border: 0.687px solid rgba(0, 0, 0, 0.5);
+    background: #fff;
+    padding: 13px 31px 12px 27px;
+    width: 550px;
+
+    input {
+      font-size: 22px;
+      font-weight: 400;
+    }
+
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

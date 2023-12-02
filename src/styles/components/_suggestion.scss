@@ -1,0 +1,35 @@
+.suggestion-container {
+  padding: 0 40px 80px;
+  background-color: white;
+  margin-top: 17px;
+
+  h2 {
+    font-size: 22px;
+    font-weight: 500;
+    margin: 40px 0 24px;
+  }
+
+  .suggestions-cards-container {
+    display: flex;
+    gap: 30px;
+
+    .suggestion-card-container {
+      img {
+        width: 165px;
+        height: 223px;
+        object-fit: cover;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .suggestion-text {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 12px;
+  }
+}
