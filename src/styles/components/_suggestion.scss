@@ -24,6 +24,12 @@
         font-size: 14px;
         font-weight: 300;
       }
+
+      &:hover{
+        scale: 1.04;
+        transition: 0.6s ease;
+        cursor: pointer;
+      }
     }
   }
 
@@ -31,5 +37,9 @@
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 12px;
+
+    &:hover{
+      text-decoration: underline;
+    }
   }
 }

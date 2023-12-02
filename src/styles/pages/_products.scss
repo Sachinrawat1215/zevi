@@ -1,5 +1,18 @@
-.products-page-container{
+.products-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+
+  h1 {
+    font-size: 40px;
+    font-weight: 400;
+    width: 100%;
+    margin: 48px 0 15px;
+  }
+
+  .product-content {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    padding: 40px;
+  }
 }
