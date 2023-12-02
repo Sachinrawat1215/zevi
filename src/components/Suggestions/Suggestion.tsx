@@ -1,8 +1,11 @@
-import React from "react";
+import { FC } from "react";
 import SuggestionCard from "./SuggestionCard";
+import { Link } from 'react-router-dom'
 
-const Suggestion = () => {
-  const popularSuggstions = [
+interface SuggestionProps {}
+
+const Suggestion: FC<SuggestionProps> = () => {
+  const popularSuggestions: string[] = [
     "Striped shirt dress",
     "Satin shirts",
     "Denim jumpsuit",
@@ -19,8 +22,8 @@ const Suggestion = () => {
         })}
       </div>
       <h2>Popular suggestions</h2>
-      {popularSuggstions.map((suggestion, index) => {
-        return <p key={index} className="suggestion-text">{suggestion}</p>;
+      {popularSuggestions.map((suggestion, index) => {
+        return <Link to="/products" key={index} className="suggestion-text">{suggestion}</Link>;
       })}
     </div>
   );

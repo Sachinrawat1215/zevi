@@ -1,12 +1,15 @@
-import { SearchBar, Suggestion } from "@components/index"
+import { FC } from "react";
+import { SearchBar, Suggestion } from "@components/index";
 
-const Home = () => {
+interface HomeProps {}
+
+const Home: FC<HomeProps> = () => {
   return (
-    <div className='home-container'>
-      <SearchBar varient="large" />
+    <div className="home-container">
+      <SearchBar variant="large" />
       <Suggestion />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export { Home };

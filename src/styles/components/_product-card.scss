@@ -1,0 +1,41 @@
+.product-card {
+  width: 240px;
+
+  img {
+    width: 240px;
+    height: 330px;
+    object-fit: cover;
+  }
+
+  .product-title {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 24px;
+  }
+
+  .prices {
+    margin-top: 12px;
+    .strike-through-price {
+      color: rgba(0, 0, 0, 0.4);
+      font-size: 20px;
+      font-weight: 300;
+      text-decoration: line-through;
+    }
+
+    .purchase-price {
+      color: #6d84ff;
+      font-size: 20px;
+      font-weight: 600;
+      margin-left: 5px;
+    }
+  }
+
+  .rating-count {
+    margin-top: 12px;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 14px;
+    font-weight: 300;
+    display: flex;
+    gap: 4px;
+  }
+}
