@@ -1,10 +1,38 @@
 .product-card {
   width: 240px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
 
-  img {
-    width: 240px;
-    height: 330px;
-    object-fit: cover;
+  .wishlist-icon{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 1;
+  }
+
+  .image-container{
+    position: relative;
+
+    img {
+      width: 240px;
+      height: 330px;
+      object-fit: cover;
+    }
+
+    p{
+      background-color: #6D84FFB5;
+      position: absolute;
+      text-shadow: 0px 4px 32px rgba(0, 0, 0, 0.25);
+      bottom: 5px;
+      padding: 12px 0 11px 0;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      display: none;
+    }
   }
 
   .product-title {
@@ -37,5 +65,16 @@
     font-weight: 300;
     display: flex;
     gap: 4px;
+  }
+
+  &:hover{
+    scale: 1.03;
+    transition: 0.6s ease;
+
+    .image-container{
+      p{
+        display: block;
+      }
+    }
   }
 }

@@ -1,9 +1,10 @@
 .sidebar-container {
-   width: 260px;
-   margin-right: 50px;
+  width: 260px;
+  margin-right: 50px;
 
   .collapse-container {
-    padding-top: 16px;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
 
     .title {
       display: flex;
@@ -14,18 +15,29 @@
     }
 
     .checkbox-options {
-      margin-top: 18px;
+      margin-top: 21px;
       display: flex;
 
       input {
         width: 20px;
         height: 20px;
+        margin: 0 10px 0 0;
       }
 
       label {
-        margin: 0 0 0 10px;
         user-select: none;
       }
+    }
+
+    &.rating {
+      .checkbox-options {
+        margin-top: 16px;
+      }
+    }
+
+    hr {
+      margin: 25px 0 20px;
+      background: rgba(0, 0, 0, 0.2);
     }
   }
 }
