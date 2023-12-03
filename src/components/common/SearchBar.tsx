@@ -11,15 +11,10 @@ const SearchBar: FC<SearchBarProps> = ({ variant, setIsFocused }) => {
     setIsFocused && setIsFocused(true);
   };
 
-  const handleBlur = () => {
-    setIsFocused && setIsFocused(false);
-  };
-
   return (
     <div className={`search-bar ${variant === "small" ? "small" : ""}`}>
       <input
         onFocus={handleFocus}
-        onBlur={handleBlur}
         type="text"
         placeholder="Search"
       />

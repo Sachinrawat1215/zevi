@@ -1,6 +1,6 @@
 import { FC } from "react";
 import SuggestionCard from "./SuggestionCard";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 interface SuggestionProps {}
 
@@ -23,7 +23,11 @@ const Suggestion: FC<SuggestionProps> = () => {
       </div>
       <h2>Popular suggestions</h2>
       {popularSuggestions.map((suggestion, index) => {
-        return <Link to="/products" key={index} className="suggestion-text">{suggestion}</Link>;
+        return (
+          <Link to="/products" key={index} className="suggestion-text">
+            {suggestion}
+          </Link>
+        );
       })}
     </div>
   );
