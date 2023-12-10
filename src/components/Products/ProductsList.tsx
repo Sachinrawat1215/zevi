@@ -1,11 +1,14 @@
 import React from 'react'
 import ProductCard from './ProductCard'
+import { getProducts } from 'src/api/productData'
 
 const ProductsList = () => {
+  const products = getProducts();
+  
   return (
     <div className='product-list-container'>
       {
-        [...new Array(20)].map((product, index) => <ProductCard key={index} product={product} index={index} />)
+        products.map((product, index) => <ProductCard key={index} product={product} index={index} />)
       }
     </div>
   )
