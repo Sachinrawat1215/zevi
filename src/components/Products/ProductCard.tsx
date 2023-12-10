@@ -10,6 +10,8 @@ interface ProductCardProps {
 
 const ProductCard: FC<ProductCardProps> = ({ product, index }) => {
   const [isWishListAdded, setIsWishListAdded] = useState<boolean>(false);
+  // console.log(product);
+  const {category, name, image, strikethroughPrice} = product;
   const randomRating: number = Math.floor(Math.random() * 5) + 1;
   const randomStrikePrice: number = Math.floor(Math.random() * 10) + 3;
 
@@ -24,12 +26,12 @@ const ProductCard: FC<ProductCardProps> = ({ product, index }) => {
       </div>
       <div className="image-container">
         <img
-          src={`https://source.unsplash.com/random/900x700/?clothes?${index}`}
+          src={`https://source.unsplash.com/random/900x700/?${name}?${index}`}
           alt="fashion"
         />
         <p>View Product</p>
       </div>
-      <p className="product-title">Round neck cotton Tee</p>
+      <p className="product-title">{name}</p>
       <div className="prices">
         <span className="strike-through-price">{`Rs. ${randomStrikePrice}99`}</span>
         <span className="purchase-price">{`Rs. ${
